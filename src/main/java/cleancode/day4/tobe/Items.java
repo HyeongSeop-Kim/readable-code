@@ -13,6 +13,10 @@ public class Items {
         return items.stream().mapToInt(Item::getPrice).sum();
     }
 
+    public boolean isTotalPriceNonPositive() {
+        return calculateTotalPrice() <= 0;
+    }
+
     public boolean isEmpty() {
         return items.isEmpty();
     }
